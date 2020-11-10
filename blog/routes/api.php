@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\SiteInfoController;
 use App\Http\Controllers\VisitorController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -20,3 +21,6 @@ Route::get('/GetVisitorDetails',[VisitorController::class,'GetVisitorDetails']);
 
 //Contact Details
 Route::post('/PostContactDetails',[ContactController::class,'PostContactDetails']);
+
+//Site Info
+Route::get('/SendSiteInfo',[SiteInfoController::class,'SendSiteInfo']);

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class VisitorTable extends Migration
+class CategoryLevel1Table extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,11 @@ class VisitorTable extends Migration
      */
     public function up()
     {
-       Schema::create('visitor',function (Blueprint $table){
-           $table->bigIncrements('id');
-           $table->string('ip_address');
-           $table->string('visit_time');
-           $table->string('visit_date');
-       });
+        Schema::create('category_level1',function (Blueprint $table){
+            $table->bigIncrements('id');
+            $table->string('cat1_name');
+            $table->string('cat1_image');
+        });
     }
 
     /**
@@ -28,6 +27,6 @@ class VisitorTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('visitor');
+        Schema::dropIfExists('category_level1');
     }
 }
