@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoryDetailsController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\SiteInfoController;
 use App\Http\Controllers\VisitorController;
@@ -24,3 +25,6 @@ Route::post('/PostContactDetails',[ContactController::class,'PostContactDetails'
 
 //Site Info
 Route::get('/SendSiteInfo',[SiteInfoController::class,'SendSiteInfo']);
+
+// Category Details
+Route::get('/SendCategoryDetails',[CategoryDetailsController::class,'SendCategoryDetails']);
