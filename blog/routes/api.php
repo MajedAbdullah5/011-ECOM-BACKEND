@@ -2,9 +2,13 @@
 
 use App\Http\Controllers\CategoryDetailsController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\FeaturedProductController;
+use App\Http\Controllers\NewArrivalController;
+use App\Http\Controllers\ProductDetailsController;
 use App\Http\Controllers\ProductListController;
 use App\Http\Controllers\SiteInfoController;
 use App\Http\Controllers\SliderController;
+use App\Http\Controllers\SpecialCollectionController;
 use App\Http\Controllers\VisitorController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -38,3 +42,12 @@ Route::get('/ProductListByCategory/{category}',[ProductListController::class,'Pr
 
 //Slider Info
 Route::get('/SendSliderInfo',[SliderController::class,'SendSliderInfo']);
+Route::get('/productDetails/{code}',[ProductDetailsController::class,'productDetails']);
+
+//Featured Product
+Route::get('/featuredProducts',[FeaturedProductController::class,'featured_products']);
+
+//Special Collection
+Route::get('/special_collection',[SpecialCollectionController::class,'special_collection']);
+//New Arrivals
+Route::get('/new_arrivals',[NewArrivalController::class,'new_arrivals']);
