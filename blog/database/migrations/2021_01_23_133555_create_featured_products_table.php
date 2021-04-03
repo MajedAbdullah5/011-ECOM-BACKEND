@@ -19,6 +19,7 @@ class CreateFeaturedProductsTable extends Migration
             $table->string('image');
             $table->string('title');
             $table->string('price');
+            $table->string('special_price');
             $table->string('discount_price');
             $table->timestamps();
         });

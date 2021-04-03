@@ -12,6 +12,7 @@ use App\Http\Controllers\SpecialCollectionController;
 use App\Http\Controllers\VisitorController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\NotificationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,3 +52,9 @@ Route::get('/featuredProducts',[FeaturedProductController::class,'featured_produ
 Route::get('/special_collection',[SpecialCollectionController::class,'special_collection']);
 //New Arrivals
 Route::get('/new_arrivals',[NewArrivalController::class,'new_arrivals']);
+
+//Notification History
+Route::get('/notification_history',[NotificationController::class,'notification_history']);
+
+//Product Search
+Route::get('/ProductSearch/{key}',[ProductListController::class,'ProductSearch']);

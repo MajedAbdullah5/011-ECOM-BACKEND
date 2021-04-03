@@ -24,6 +24,7 @@ class CreateNewArrivalsTable extends Migration
             $table->text('description');
             $table->string('price');
             $table->string('discount_price');
+            $table->string('special_price');
             $table->string('size');
             $table->string('color');
             $table->timestamps();

@@ -21,4 +21,7 @@ class ProductListController extends Controller
        $category = $request->category;
        return ProductListModel::where('category',$category)->get();
    }
+   function ProductSearch(Request $request){
+       return ProductListModel::where('title','LIKE',"%{$request->key}%")->get();
+   }
 }
