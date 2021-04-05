@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\CategoryDetailsController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\FeaturedProductController;
@@ -13,6 +14,7 @@ use App\Http\Controllers\VisitorController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NotificationController;
+use App\Http\Controllers\ProductReviewController;
 
 /*
 |--------------------------------------------------------------------------
@@ -58,3 +60,19 @@ Route::get('/notification_history',[NotificationController::class,'notification_
 
 //Product Search
 Route::get('/ProductSearch/{key}',[ProductListController::class,'ProductSearch']);
+
+//Suggested Products
+Route::get('/SuggestedProducts/{subcategory}',[ProductListController::class,'SuggestedProducts']);
+
+//Review Controller
+Route::post('/postReview',[ProductReviewController::class,'postReview']);
+Route::get('/getReview/{code}',[ProductReviewController::class,'getReview']);
+
+//Add to cart
+Route::post('/AddToCart',[CartController::class,'AddToCart']);
+Route::get('/GetCartList/{mobile}',[CartController::class,'GetCartList']);
+Route::get('/CountPriceItem/{mobile}',[CartController::class,'CountPriceItem']);
+Route::get('/CountTotalPrice/{mobile}',[CartController::class,'CountTotalPrice']);
+Route::post('/DeleteItem/{id}',[CartController::class,'DeleteItem']);
+
+

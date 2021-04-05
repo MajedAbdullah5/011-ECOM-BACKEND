@@ -24,6 +24,8 @@ class ProductListTable extends Migration
            $table->string('remark');
            $table->string('brand');
            $table->string('star');
+           $table->string('shop_name')->nullable();
+           $table->string('shop_code')->nullable();
            $table->string('product_code');
        });
     }
