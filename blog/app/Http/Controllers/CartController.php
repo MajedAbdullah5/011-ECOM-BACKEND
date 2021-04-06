@@ -62,4 +62,24 @@ class CartController extends Controller
         $id = $request->id;
         return ProductCart::where('id',$id)->delete();
     }
+    function onAdd(Request $request){
+        $id = $request->id;
+        $newQuantity = $request->newQuantity;
+        $newTotal= $request->newTotal;
+
+        return ProductCart::where('id','=',$id)->update([
+            'product_quantity'=>$newQuantity,
+            'total_price'=>$newTotal
+        ]);
+    }
+    function onSubtract(Request $request){
+        $id = $request->id;
+        $newQuantity = $request->newQuantity;
+        $newTotal= $request->newTotal;
+
+        return ProductCart::where('id','=',$id)->update([
+            'product_quantity'=>$newQuantity,
+            'total_price'=>$newTotal
+        ]);
+    }
 }

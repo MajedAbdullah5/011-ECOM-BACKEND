@@ -74,5 +74,8 @@ Route::get('/GetCartList/{mobile}',[CartController::class,'GetCartList']);
 Route::get('/CountPriceItem/{mobile}',[CartController::class,'CountPriceItem']);
 Route::get('/CountTotalPrice/{mobile}',[CartController::class,'CountTotalPrice']);
 Route::post('/DeleteItem/{id}',[CartController::class,'DeleteItem']);
+Route::post('/DeleteItem/{id}',[CartController::class,'DeleteItem']);
+Route::post('/onAdd',[CartController::class,'onAdd']);
+Route::post('/onSubtract',[CartController::class,'onSubtract']);
 
 
